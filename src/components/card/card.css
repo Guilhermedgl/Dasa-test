@@ -1,0 +1,15 @@
+.card {
+  background-color: rgb(240, 240, 255);
+  min-height: 50px;
+  margin: 1% 0;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+.name {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 20px;
+}
