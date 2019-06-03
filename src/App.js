@@ -8,9 +8,10 @@ class App extends Component {
     this.state = {
 			pokemons: [],
     }
+    this.getPokemons = this.getPokemons.bind(this);
   }
 
-  componentDidMount() {
+  getPokemons() {
     axios.get('https://pokeapi.co/api/v2/pokemon')
     	.then(response => {
         this.setState({ pokemons: response.data.results })
@@ -18,9 +19,14 @@ class App extends Component {
 			.catch(error => console.log(error))
   }
 
+  componentDidMount() {
+    this.getPokemons()
+  }
+
   render() {
+    const po = [...this.state.pokemons]
     return (
-      <Home pokemons={this.state.pokemons}/>
+      <Home pokemons={this.state.pokemons} po={po} />
     );
   }
 }

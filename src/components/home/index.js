@@ -2,37 +2,35 @@ import React, { Component } from 'react';
 import Navbar from '../navbar';
 import Card from '../card';
 import Search from '../search';
-import axios from 'axios';
 import './home.css';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemonsList: [],
+      pokemonsList: this.props.po,
+      search: '',
     }
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  componentDidMount() {
-    axios.get('https://pokeapi.co/api/v2/pokemon')
-    	.then(response => {
-        this.setState({ pokemonsList: response.data.results })
-			})
-			.catch(error => console.log(error))
+    this.renderList = this.renderList.bind(this);
   }
 
   handleChange(e) {
     e.preventDefault();
-    const pokemonsList = this.props.pokemons;
     const search = e.target.value.toLowerCase();
-    const filteredList = pokemonsList.filter(pokemon => {
-      const name = pokemon.name.toLowerCase();
-       if (name.includes(search)){
+    this.setState({search})
+  }
+
+  renderList() {
+    const list = [...this.props.pokemons];
+    const search = this.state.search;
+    const re = new RegExp(search, 'gi') 
+    const reVowels = new RegExp(/[aeiou]/, 'gi')
+    return list.filter(pokemon => {
+      if (pokemon.name.match(re) || pokemon.name.replace(reVowels, '').match(re)) {
         return pokemon;
       }
     })
-    this.setState({ pokemonsList: filteredList })
   }
 
   render() {
@@ -40,10 +38,10 @@ class Home extends Component {
       <div>
         <Navbar />
         <div className="container">
-          <Search handleChange={this.handleChange}/>
+          <Search handleChange={this.handleChange} />
           <div>
             <h3 className="notes">Notas</h3>
-            {this.state.pokemonsList.map((pokemon, idx) => {
+            {this.renderList().map((pokemon, idx) => {
               return  <Card pokemon={pokemon} key={idx} />
             })}
           </div>
