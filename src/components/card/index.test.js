@@ -8,6 +8,7 @@ describe('<Card />', () => {
       name: 'bulbasaur'
     }
     const component = create(<Card pokemon={pokemon} />);
+    console.log('###############', component.toJSON)
     expect(component.toJSON()).toMatchSnapshot();
   });
 });

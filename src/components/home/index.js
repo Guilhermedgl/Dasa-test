@@ -8,7 +8,6 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemonsList: this.props.po,
       search: '',
     }
     this.handleChange = this.handleChange.bind(this);
@@ -24,8 +23,8 @@ class Home extends Component {
   renderList() {
     const list = [...this.props.pokemons];
     const { search } = this.state;
-    const re = new RegExp(search, 'gi') 
-    const reVowels = new RegExp(/[aeiou]/, 'gi')
+    const re = new RegExp(search, 'gi');
+    const reVowels = new RegExp(/[aeiou]/, 'gi');
     return list.filter(pokemon => {
       if (pokemon.name.match(re) || pokemon.name.replace(reVowels, '').match(re)) {
         return pokemon;
