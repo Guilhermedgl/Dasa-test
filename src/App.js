@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-			pokemons: [],
+		  pokemons: [],
     }
     this.getPokemons = this.getPokemons.bind(this);
   }
@@ -24,9 +24,8 @@ class App extends Component {
   }
 
   render() {
-    const po = [...this.state.pokemons]
     return (
-      <Home pokemons={this.state.pokemons} po={po} />
+      <Home pokemons={this.state.pokemons} />
     );
   }
 }
