@@ -18,12 +18,12 @@ class Home extends Component {
   handleChange(e) {
     e.preventDefault();
     const search = e.target.value.toLowerCase();
-    this.setState({search})
+    this.setState({ search })
   }
 
   renderList() {
     const list = [...this.props.pokemons];
-    const search = this.state.search;
+    const { search } = this.state;
     const re = new RegExp(search, 'gi') 
     const reVowels = new RegExp(/[aeiou]/, 'gi')
     return list.filter(pokemon => {
@@ -35,7 +35,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <Navbar />
         <div className="container">
           <Search handleChange={this.handleChange} />
@@ -46,7 +46,7 @@ class Home extends Component {
             })}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
