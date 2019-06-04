@@ -11,16 +11,13 @@ class App extends Component {
     this.getPokemons = this.getPokemons.bind(this);
   }
 
-  getPokemons() {
-    axios.get('https://pokeapi.co/api/v2/pokemon')
-    	.then(response => {
-        this.setState({ pokemons: response.data.results })
-			})
-			.catch(error => console.log(error))
+  async getPokemons() {
+    const response = await axios.get('https://pokeapi.co/api/v2/pokemon')
+    this.setState({ pokemons: response.data.results });
   }
 
-  componentDidMount() {
-    this.getPokemons()
+  async componentDidMount() {
+    await this.getPokemons();
   }
 
   render() {

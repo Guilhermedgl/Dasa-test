@@ -27,7 +27,7 @@ describe('<Home />', () => {
   it('should have a empty string in initial state', () => {
     const component = create(<Home pokemons={pokemonsProps} />);
     const instance = component.getInstance();
-    expect(instance.state.search).toHaveLength(0);
+    expect(instance.state.search).toBe('');
   });
 
   it('should return full array with empty search', () => {
