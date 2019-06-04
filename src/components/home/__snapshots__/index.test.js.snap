@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should match with snapshot 1`] = `
+<section>
+  <nav
+    className="navbar"
+  >
+    <h1>
+      Pokemons
+    </h1>
+  </nav>
+  <div
+    className="container"
+  >
+    <div
+      className="container-input"
+    >
+      <input
+        className="input"
+        onChange={[Function]}
+        placeholder="Pesquise por um Pokemon"
+        type="text"
+      />
+    </div>
+    <div>
+      <h3
+        className="notes"
+      >
+        Notas
+      </h3>
+      <div
+        className="card"
+      >
+        <p
+          className="name"
+        >
+          bulbasaur
+        </p>
+      </div>
+      <div
+        className="card"
+      >
+        <p
+          className="name"
+        >
+          ivysaur
+        </p>
+      </div>
+      <div
+        className="card"
+      >
+        <p
+          className="name"
+        >
+          venusaur
+        </p>
+      </div>
+      <div
+        className="card"
+      >
+        <p
+          className="name"
+        >
+          charmander
+        </p>
+      </div>
+      <div
+        className="card"
+      >
+        <p
+          className="name"
+        >
+          charmeleon
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;

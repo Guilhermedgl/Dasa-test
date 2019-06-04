@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> should render props.name 1`] = `
+exports[`<Card /> should snapshot should match 1`] = `
 <div
   className="card"
 >

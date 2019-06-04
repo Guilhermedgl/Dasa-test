@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> should match with snapshot 1`] = `
+<nav
+  className="navbar"
+>
+  <h1>
+    Pokemons
+  </h1>
+</nav>
+`;

@@ -29,7 +29,8 @@ class Home extends Component {
       if (pokemon.name.match(re) || pokemon.name.replace(reVowels, '').match(re)) {
         return pokemon;
       }
-    })
+      return null;
+    });
   }
 
   render() {
