@@ -14,12 +14,14 @@ class Home extends Component {
     this.renderList = this.renderList.bind(this);
   }
 
+  // Change the search property on state
   handleChange(e) {
     e.preventDefault();
     const search = e.target.value.toLowerCase();
     this.setState({ search })
   }
 
+  // Return a filtered array of pokemons with search property
   renderList() {
     const list = [...this.props.pokemons];
     const { search } = this.state;

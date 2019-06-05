@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   background-color: rgb(240, 240, 255);
   min-height: 50px;
   margin: 1% 0;
@@ -9,6 +9,11 @@
 }
 
 .name {
-  font-size: 18px;
   color: rgb(87, 87, 87);
+  font-size: 18px;
+}
+
+.date {
+  color: rgb(160, 160, 160);
+  font-size: 15px;
 }

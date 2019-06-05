@@ -10,11 +10,4 @@ describe('<App />', () => {
     expect(component.toJSON()).toMatchSnapshot();
     expect(instance.state.pokemons).toHaveLength(0);
   });
-
-  it('should update state with componentDidMount', async () => {
-    const component = create(<App />);
-    const instance = component.getInstance();
-    await instance.componentDidMount();
-    expect(instance.state.pokemons.length).toBeGreaterThan(0);
-  });
 });

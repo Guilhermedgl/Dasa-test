@@ -36,6 +36,11 @@ exports[`<Home /> should match with snapshot 1`] = `
         >
           bulbasaur
         </p>
+        <p
+          className="date"
+        >
+          17-08-2017
+        </p>
       </div>
       <div
         className="card"
@@ -44,6 +49,11 @@ exports[`<Home /> should match with snapshot 1`] = `
           className="name"
         >
           ivysaur
+        </p>
+        <p
+          className="date"
+        >
+          17-08-2017
         </p>
       </div>
       <div
@@ -54,6 +64,11 @@ exports[`<Home /> should match with snapshot 1`] = `
         >
           venusaur
         </p>
+        <p
+          className="date"
+        >
+          17-08-2017
+        </p>
       </div>
       <div
         className="card"
@@ -63,6 +78,11 @@ exports[`<Home /> should match with snapshot 1`] = `
         >
           charmander
         </p>
+        <p
+          className="date"
+        >
+          17-08-2017
+        </p>
       </div>
       <div
         className="card"
@@ -71,6 +91,11 @@ exports[`<Home /> should match with snapshot 1`] = `
           className="name"
         >
           charmeleon
+        </p>
+        <p
+          className="date"
+        >
+          17-08-2017
         </p>
       </div>
     </div>

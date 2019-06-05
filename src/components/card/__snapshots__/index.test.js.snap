@@ -9,5 +9,10 @@ exports[`<Card /> should snapshot should match 1`] = `
   >
     bulbasaur
   </p>
+  <p
+    className="date"
+  >
+    17-08-2017
+  </p>
 </div>
 `;

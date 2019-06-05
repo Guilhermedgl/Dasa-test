@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Home from './components/home'
+import Home from './components/home';
+import { apiUrl } from './configs/api';
 
 class App extends Component {
   constructor() {
@@ -11,13 +12,17 @@ class App extends Component {
     this.getPokemons = this.getPokemons.bind(this);
   }
 
-  async getPokemons() {
-    const response = await axios.get('https://pokeapi.co/api/v2/pokemon')
-    this.setState({ pokemons: response.data.results });
+  // GET an array of pokemons from api url
+  getPokemons() {
+    axios.get(apiUrl)
+      .then(response => {
+        this.setState({ pokemons: response.data.results });
+      })
+      .catch(error => console.log(error))
   }
 
-  async componentDidMount() {
-    await this.getPokemons();
+  componentDidMount() {
+    this.getPokemons();
   }
 
   render() {
