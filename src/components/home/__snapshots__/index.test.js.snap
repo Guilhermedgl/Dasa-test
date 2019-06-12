@@ -34,7 +34,7 @@ exports[`<Home /> should match with snapshot 1`] = `
         <p
           className="name"
         >
-          bulbasaur
+          Bulbasaur
         </p>
         <p
           className="date"
@@ -48,7 +48,7 @@ exports[`<Home /> should match with snapshot 1`] = `
         <p
           className="name"
         >
-          ivysaur
+          Ivysaur
         </p>
         <p
           className="date"
@@ -62,7 +62,7 @@ exports[`<Home /> should match with snapshot 1`] = `
         <p
           className="name"
         >
-          venusaur
+          Venusaur
         </p>
         <p
           className="date"
@@ -76,7 +76,7 @@ exports[`<Home /> should match with snapshot 1`] = `
         <p
           className="name"
         >
-          charmander
+          Charmander
         </p>
         <p
           className="date"
@@ -90,7 +90,7 @@ exports[`<Home /> should match with snapshot 1`] = `
         <p
           className="name"
         >
-          charmeleon
+          Charmeleon
         </p>
         <p
           className="date"

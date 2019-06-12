@@ -7,7 +7,7 @@ exports[`<Card /> should snapshot should match 1`] = `
   <p
     className="name"
   >
-    bulbasaur
+    Bulbasaur
   </p>
   <p
     className="date"
