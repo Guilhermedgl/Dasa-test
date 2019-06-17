@@ -7,9 +7,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-		  pokemons: [],
+      pokemons: [],
     }
     this.getPokemons = this.getPokemons.bind(this);
+  }
+
+  componentDidMount() {
+    this.getPokemons();
   }
 
   // GET an array of pokemons from api url
@@ -21,9 +25,6 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
-  componentDidMount() {
-    this.getPokemons();
-  }
 
   render() {
     return (

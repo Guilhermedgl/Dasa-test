@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './card.css';
 
 const titleCase = (name) => {
@@ -12,6 +13,10 @@ const Card = ({ pokemon }) => {
       <p className="date">17-08-2017</p>
     </div>
   );
+};
+
+Card.propTypes = {
+  pokemon: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Card;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Navbar from '../navbar';
 import Card from '../card';
 import Search from '../search';
@@ -52,5 +53,9 @@ class Home extends Component {
     );
   }
 }
+
+Home.propTypes = {
+  pokemons: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default Home;
